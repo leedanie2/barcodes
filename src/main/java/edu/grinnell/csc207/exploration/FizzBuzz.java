@@ -7,7 +7,26 @@ public class FizzBuzz {
     //
     // mvn compile exec:java -q "-Dexec.mainClass=edu.grinnell.csc207.exploration.FizzBuzz"
     public static void main(String[] args) {
-        // TODO: fill me in!
-        System.out.println("Hello world!");   
+        int n = Integer.parseInt(args[0]);
+        for(int i = 1; i <= n; i ++) {
+            FizzBuzzHelper(i);
+        }
+    }
+    public static void FizzBuzzHelper(int n) {
+        String tmp = new String();
+        boolean printNum = true;
+        if (n % 3 == 0) {
+            tmp = tmp + "fizz";
+            printNum = false;
+        }
+        if (n % 5 == 0) {
+            tmp = tmp + "buzz";
+            printNum = false;
+        }
+        if (printNum) { // print number if nothing else
+            System.out.println(n);
+        } else {
+            System.out.println(tmp);
+        }
     }
 }
