@@ -32,7 +32,25 @@ public class Barcodes {
      * TODO: fill in this definition and doc comment!
      */
     public static int computeCheckDigit(String code) {
-        return -1;
+        int C = 0;
+        for(int i = 0; i < 10; i++) {
+            C += 3 * toDigit(code.charAt(i));
+            C += toDigit(code.charAt(++i));
+        }
+        C = C % 10;
+        if (C == 0) {
+            return 0;
+        } else {
+            return 10 - C;
+        }
+    }
+
+    public static void printBlack() {
+        System.out.println("\033[30m█\033[0m");
+    }
+
+    public static void printWhite() {
+        System.out.println("\033[37m█\033[0m");
     }
 
     /**
