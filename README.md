@@ -2,7 +2,7 @@
 
 ## About
 
-_(TODO: insert a description of the project here!)_
+Fully documented Barcodes.java (project 1) and StringExploration.java (lab 1)
 
 ### Authors
 
@@ -11,8 +11,7 @@ _(TODO: insert a description of the project here!)_
 
 ### Resources
 
-*   _(TODO: list your resources here!)_
-*   ...
+*   Talked to Professor Osera about the project
 
 ## Write-up
 
