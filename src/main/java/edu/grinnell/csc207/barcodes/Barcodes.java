@@ -6,12 +6,26 @@ public class Barcodes {
         // TODO: fill me in!
     };
 
+    /**
+     * TODO: fill in this definition and doc comment!
+     */
+    public static int toDigit(char ch) {
+        return ch - '0';
+    }
 
     /**
      * TODO: fill in this definition and doc comment!
      */
     public static boolean isValidCode(String code) {
-        return false;
+        if(code.length() != 12) {
+            return false;
+        }
+        for(int i = 0; i < 12; i++) {
+            if(!Character.isDigit(toDigit(code.charAt(i)))) {
+                return false;
+            }
+        }
+        return true;
     }
 
     /**
